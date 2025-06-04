@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root {
+  height: inherit;
+  overflow: scroll;
+}
