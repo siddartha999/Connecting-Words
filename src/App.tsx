@@ -1,35 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div id="main" className='bg-black h-[inherit] text-white'>
+      <div id="title" className='text-center pt-10'>
+        <p className='lg:text-3xl sm:text-xl '>Connecting Words</p>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div id="outline" className='text-center flex flex-wrap gap-12 pt-12 justify-center'>
+         <div className='w-[25rem] h-[25rem] cursor-pointer rounded-xl bg-sky-600 hover:bg-sky-700'>
+           <p className='text-2xl pt-[10rem]'>Write</p>
+         </div>
+         <div className='w-[25rem] h-[25rem] cursor-pointer rounded-xl bg-indigo-600 hover:bg-indigo-700'>
+           <p className='text-2xl pt-[10rem]'>Read</p>
+         </div>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
-export default App
+export default App;
