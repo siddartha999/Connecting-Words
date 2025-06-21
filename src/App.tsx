@@ -1,22 +1,35 @@
-import "./App.css";
-import DocumentOutline, { DocumentType } from "./components/DocumentOutline/DocumentOutline";
+import { useState } from 'react'
+import reactLogo from './assets/react.svg'
+import viteLogo from '/vite.svg'
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
-    <main className="bg-gray-700 w-[100%] h-full pl-4" >
-      <div id="title" className="pt-6">
-        <h1 className="text-white font-bold text-center text-2xl">Connecting Words</h1>
+    <>
+      <div>
+        <a href="https://vite.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://react.dev" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
       </div>
-      <div id="create-docs" className="mt-8 flex flex-nowrap gap-12">
-        <div><DocumentOutline type={DocumentType.DEFAULT} /></div>
-        <div><DocumentOutline type={DocumentType.BOOK} /></div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
       </div>
-      <div id="recent-docs" className="mt-16">
-          <p className="text-white font-semibold">Recent documents</p>
-      </div>
-    </main>
-  );
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
+    </>
+  )
 }
 
-export default App;
+export default App
